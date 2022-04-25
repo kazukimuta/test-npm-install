@@ -1,0 +1,46 @@
+{
+  "name": "lsc-lambda-dev-support",
+  "version": "0.2.7",
+  "description": "",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "test-db": "jest --config jestconfig-db-tests.json",
+    "build-watch": "tsc --watch",
+    "build": "tsc",
+    "push-new-version": "npm run build && npm publish"
+  },
+  "author": "LFK",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "aws-sdk": "^2.796.0",
+    "command-line-args": "^5.1.1",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-logger": "^3.2.1",
+    "lambda-api": "^0.10.6",
+    "lodash": "^4.17.19",
+    "luxon": "^1.25.0",
+    "uuid": "^8.3.1",
+    "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.64",
+    "@types/command-line-args": "^5.0.0",
+    "@types/jest": "^26.0.5",
+    "@types/koa": "^2.11.6",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa__cors": "^3.0.2",
+    "@types/lodash": "^4.14.158",
+    "@types/luxon": "^1.25.0",
+    "@types/node": "^14.0.27",
+    "@types/uuid": "^8.3.0",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.3",
+    "typescript": "^3.9.7"
+  }
+}

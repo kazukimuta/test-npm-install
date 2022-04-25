@@ -1,0 +1,30 @@
+import { AwsCredentials } from "../types";
+import { ResultsQueryModel } from "./results-query-builder";
+export default class ResultsQueryExecutor {
+    private tableName;
+    private awsCredentials;
+    private _usedTimeMs;
+    private _usedCapacityUnits;
+    private _items;
+    private _lastEvaluatedKey;
+    private _limit;
+    private table;
+    private _timeLimit;
+    private attrs?;
+    private _adjustPage;
+    private _requestMaxCount;
+    constructor(tableName: string, awsCredentials: AwsCredentials);
+    set adjustPage(flag: boolean);
+    set limit(limit: number);
+    set attributesToFetch(attrs: string[]);
+    set requestMaxTime(limit: number);
+    set maxExtractedCount(maxCount: number);
+    private adjustEvaluatedPage;
+    private performPageRequest;
+    private _loadRawLines;
+    loadRawLines(queryModel: ResultsQueryModel): Promise<void>;
+    get items(): any[];
+    get lastEvaluatedKey(): any;
+    get usedTimeMs(): number;
+    get usedCapacityUnits(): number;
+}
