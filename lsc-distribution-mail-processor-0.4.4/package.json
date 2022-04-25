@@ -1,0 +1,23 @@
+{
+  "name": "lsc-distribution-mail-processor",
+  "version": "0.4.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config ./jest.config.json",
+    "build-publish": "npm publish"
+  },
+  "author": "LFK",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "lodash": "^4.17.19",
+    "sed-lite": "^0.8.2"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "files": [
+    "index.js",
+    "lib/"
+  ]
+}
